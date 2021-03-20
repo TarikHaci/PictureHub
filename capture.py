@@ -1,7 +1,9 @@
 import time
 import picamera
+import uuid
 
 with picamera.PiCamera() as camera:
+    imgobject = "card"
     camera.resolution = (480, 480)
     camera.framerate = 30
     # Wait for the automatic gain control to settle
@@ -13,4 +15,4 @@ with picamera.PiCamera() as camera:
     camera.awb_mode = 'off'
     camera.awb_gains = g
     # Finally, take several photos with the fixed settings
-    camera.capture_sequence(['pictures/card_image%02d.jpg' % i for i in range(10)])
+    camera.capture_sequence(['pictures/'+imgobject+'/'+imgobject+'_image%02d-' + str(uuid.uuid4().hex) + '.jpg' % i for i in range(17)])
