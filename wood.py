@@ -13,4 +13,4 @@ with picamera.PiCamera() as camera:
     camera.awb_mode = 'off'
     camera.awb_gains = g
     # Finally, take several photos with the fixed settings
-    camera.capture_sequence(['pictures/image%02d.jpg' % i for i in range(10)])
+    camera.capture_sequence(['pictures/wood_image%02d.jpg' % i for i in range(10)])
