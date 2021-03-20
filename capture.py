@@ -2,7 +2,7 @@ import time
 import picamera
 
 with picamera.PiCamera() as camera:
-    camera.resolution = (1280, 720)
+    camera.resolution = (480, 480)
     camera.framerate = 30
     # Wait for the automatic gain control to settle
     time.sleep(2)
