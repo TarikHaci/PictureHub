@@ -15,4 +15,4 @@ with picamera.PiCamera() as camera:
     camera.awb_mode = 'off'
     camera.awb_gains = g
     # Finally, take several photos with the fixed settings
-    camera.capture_sequence(['pictures/'+imgobject+'/'+imgobject+'_image%02d-' + str(uuid.uuid4().hex) + '.jpg' % i for i in range(17)])
+    camera.capture_sequence(['pictures/'+imgobject+'/'+imgobject+'_image%02d-' + str(uuid.uuid4()) + '.jpg' % i for i in range(17)])
