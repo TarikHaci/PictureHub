@@ -3,7 +3,7 @@ import picamera
 import uuid
 
 with picamera.PiCamera() as camera:
-    imgobject = "disk-white"
+    imgobject = "disk_white"
     camera.resolution = (480, 480)
     camera.framerate = 30
     # Wait for the automatic gain control to settle
